@@ -5,26 +5,19 @@ public class GestionnaireAccueil : MonoBehaviour
 {
 [SerializeField] private InfosJoueur infosJoueur;
 
-   public void ChangementNom(string nomJoueur){
-    infosJoueur.nomJoueur = nomJoueur;
+   public void ChangementNomJoueur(string nomJoueurTexte){
+    infosJoueur.nomJoueur = nomJoueurTexte;
     Debug.Log(infosJoueur.nomJoueur);
    }
-   public void ChangementNomVillage(string nomVillage){
-    infosJoueur.nomVillage = nomVillage;
+   public void ChangementNomVillage(string nomVillageTexte){
+    infosJoueur.nomVillage = nomVillageTexte;
     Debug.Log(infosJoueur.nomVillage);
    }
 
 
    public void VerifChangmenentScene(){
     if(infosJoueur.nomJoueur != "" && infosJoueur.nomVillage != ""){
-        ChangementScene("Village");
+        SceneManager.LoadScene("village");
     }
    }
-
-
-    public void ChangementScene(string _nomScene){
-        SceneManager.LoadScene(_nomScene);
-    }
-
-   
 }

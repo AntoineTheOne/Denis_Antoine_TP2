@@ -8,13 +8,17 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "InfosJouer", menuName = "InfosJoueur")]
 public class InfosJoueur : ScriptableObject
 {
+
+    
     public string nomJoueur;
     public string nomVillage;
+
     public int point;
     public int nbrVie;
 
-
-
+    public bool sacJaune = false;
+    public bool sacBleu = false;
+    public bool sacRouge = false;
 
 
 

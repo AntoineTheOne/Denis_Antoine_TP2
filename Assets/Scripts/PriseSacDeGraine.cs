@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class PriseSacDeGraine : MonoBehaviour
 {
@@ -6,17 +7,25 @@ public class PriseSacDeGraine : MonoBehaviour
     [SerializeField] private InfosJoueur infosJoueur;
 
 
+
+void Start(){
+    infosJoueur.sacEnMain = false;
+}
+
     private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.CompareTag("Player"))
-        {
-            graineDansMain.SetActive(true);
-            Destroy(gameObject);
-            infosJoueur.sacJaune = true;
-            Debug.Log(infosJoueur.sacJaune);
-        }
-        }
+    {   
+       
+            if (other.gameObject.CompareTag("Player") && infosJoueur.sacEnMain == false)
+            {
+                infosJoueur.sacEnMain = true;
+                Debug.Log( "test: " + other.gameObject.transform.Find("AncorSac"));
+                transform.SetParent(other.gameObject.transform.Find("AncorSac"), false);
+                infosJoueur.sacJaune = true;
+            }
+        
+
     }
+}
 
 
 // && gameObject.CompareTag("Jaune")

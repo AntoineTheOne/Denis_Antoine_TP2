@@ -16,3 +16,7 @@ MonoBehaviour:
   nomVillage: 
   point: 0
   nbrVie: 0
+  sacEnMain: 1
+  sacJaune: 1
+  sacBleu: 0
+  sacRouge: 0

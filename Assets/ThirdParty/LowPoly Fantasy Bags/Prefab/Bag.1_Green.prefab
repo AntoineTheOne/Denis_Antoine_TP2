@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 6453968643789051668}
   - component: {fileID: 769432886532484077}
   - component: {fileID: -1839568200643314263}
+  - component: {fileID: 296728353250181480}
   m_Layer: 0
   m_Name: Bag.1_Green
-  m_TagString: Untagged
+  m_TagString: Bleu
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -32,7 +33,7 @@ Transform:
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &6453968643789051668
 MeshFilter:
@@ -99,10 +100,24 @@ MeshCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -5068647514483903738, guid: d8855c116b5611c488299d2e4d82c571, type: 3}
+--- !u!114 &296728353250181480
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1337926630556278577}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 649a611cb0573de4f898b4cd10003fd4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  graineDansMain: {fileID: 0}
+  infosJoueur: {fileID: 0}

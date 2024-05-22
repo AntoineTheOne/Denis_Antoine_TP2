@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nomJoueur: 
   nomVillage: 
-  point: 0
+  point: 5
   nbrVie: 0
   sacEnMain: 1
   sacJaune: 1

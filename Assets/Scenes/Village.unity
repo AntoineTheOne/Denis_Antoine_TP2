@@ -3937,6 +3937,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: ArbreBleu (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 5724256023691191629, guid: 6dc0055f8d9a71d47b17f61b03658bcc,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7806136308917996962, guid: 6dc0055f8d9a71d47b17f61b03658bcc,
         type: 3}
       propertyPath: m_RootOrder

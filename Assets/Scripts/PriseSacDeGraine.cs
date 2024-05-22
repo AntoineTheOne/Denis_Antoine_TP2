@@ -7,7 +7,7 @@ public class PriseSacDeGraine : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Player" && gameObject.CompareTag("Jaune")))
+        if (other.gameObject.CompareTag("Player"))
         {
 
 
@@ -18,3 +18,5 @@ public class PriseSacDeGraine : MonoBehaviour
         }
     }
 }
+
+// && gameObject.CompareTag("Jaune")

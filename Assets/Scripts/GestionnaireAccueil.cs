@@ -24,7 +24,7 @@ private void Start(){
 
    public void VerifChangmenentScene(){
     if(infosJoueur.nomJoueur != "" && infosJoueur.nomVillage != ""){
-        SceneManager.LoadScene("village");
+        SceneManager.LoadScene("ScenePrincipal");
     }
    }
 }

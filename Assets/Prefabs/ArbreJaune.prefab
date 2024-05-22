@@ -113,8 +113,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1692627720618982911}
   m_LocalRotation: {x: -0.0000000218557, y: 0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.989, z: 0.012}
-  m_LocalScale: {x: 1.5641, y: 1, z: 1.6828789}
+  m_LocalPosition: {x: 0.0066, y: 0.989, z: -0.0259}
+  m_LocalScale: {x: 2.809606, y: 1, z: 3.1295795}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5121241908255285720}
@@ -205,6 +205,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   arbre: {fileID: 5787696345349507186}
   infosJoueur: {fileID: 11400000, guid: 515ad02c0cf7bed4b8744016ec74d23f, type: 2}
+  anchor: {fileID: 0}
+  arbreRouge: 0
+  arbreJaune: 1
+  arbreBleu: 0
 --- !u!1 &5787696345349507186
 GameObject:
   m_ObjectHideFlags: 0
@@ -216,6 +220,7 @@ GameObject:
   - component: {fileID: 8116201498184723302}
   - component: {fileID: 1792454752899956399}
   - component: {fileID: 3610636370739598232}
+  - component: {fileID: 8318285324382332503}
   m_Layer: 0
   m_Name: ArbreJaune
   m_TagString: Untagged
@@ -288,3 +293,24 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &8318285324382332503
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5787696345349507186}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.5805626, y: 6.5791864, z: 0.6213074}
+  m_Center: {x: 0.06989479, y: 3.281025, z: 0.01804638}

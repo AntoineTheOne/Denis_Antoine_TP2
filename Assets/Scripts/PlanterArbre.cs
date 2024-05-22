@@ -1,74 +1,76 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SocialPlatforms.Impl;
 
 public class PlanterArbre : MonoBehaviour
 {
     [SerializeField] private GameObject arbre;
     [SerializeField] private InfosJoueur infosJoueur;
     [SerializeField] private GameObject anchor;
+    public bool arbreRouge;
+    public bool arbreJaune;
+    public bool arbreBleu;
 
-
-
-private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
-        if(!other.gameObject.CompareTag("Player")) return;
+        if (!other.gameObject.CompareTag("Player")) return;
 
-        if (infosJoueur.sacJaune && infosJoueur.sacRouge == false && infosJoueur.sacBleu == false)
+        if (infosJoueur.TypeDeSacDansMain == "Jaune" && arbreJaune)
         {
             ActivationArbreJaune();
             infosJoueur.sacEnMain = false;
         }
-        else if (infosJoueur.sacJaune == false && infosJoueur.sacRouge && infosJoueur.sacBleu == false)
+        else if (infosJoueur.TypeDeSacDansMain == "Rouge" && arbreRouge)
         {
             ActivationArbreRouge();
             infosJoueur.sacEnMain = false;
         }
-        else if (infosJoueur.sacJaune == false && infosJoueur.sacRouge == false && infosJoueur.sacBleu)
+        else if (infosJoueur.TypeDeSacDansMain == "Bleu" && arbreBleu)
         {
             ActivationArbreBleu();
             infosJoueur.sacEnMain = false;
         }
-
     }
 
     private void ActivationArbreJaune()
     {
-        if (infosJoueur.sacJaune)
+        if (infosJoueur.TypeDeSacDansMain == "Jaune")
         {
             infosJoueur.point += 5;
             arbre.SetActive(true);
-            infosJoueur.sacJaune = false;
-            Destroy(anchor);
+            infosJoueur.TypeDeSacDansMain = "";
+            DetruireEnfants(anchor);
         }
     }
+
     private void ActivationArbreRouge()
     {
-        if (infosJoueur.sacRouge)
+        if (infosJoueur.TypeDeSacDansMain == "Rouge")
         {
             infosJoueur.point += 1;
             arbre.SetActive(true);
-            infosJoueur.sacRouge = false;
-            Destroy(anchor);
+            infosJoueur.TypeDeSacDansMain = "";
+            DetruireEnfants(anchor);
         }
     }
 
     private void ActivationArbreBleu()
     {
-        if (infosJoueur.sacBleu)
+        if (infosJoueur.TypeDeSacDansMain == "Bleu")
         {
             infosJoueur.point += 3;
             arbre.SetActive(true);
-            infosJoueur.sacBleu = false;
-            Destroy(anchor);
+            infosJoueur.TypeDeSacDansMain = "";
+            DetruireEnfants(anchor);
         }
     }
+
     
-
-
-
-
-
-
+    private void DetruireEnfants(GameObject parent)
+    {
+        foreach (Transform enfant in parent.transform)
+        {
+            Destroy(enfant.gameObject);
+        }
+    }
 }

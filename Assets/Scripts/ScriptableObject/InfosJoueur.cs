@@ -18,9 +18,10 @@ public class InfosJoueur : ScriptableObject
 
     public bool sacEnMain = false;
 
-    public bool sacJaune = false;
-    public bool sacBleu = false;
-    public bool sacRouge = false;
+
+
+public string TypeDeSacDansMain;
+
 
 
 }

@@ -120,6 +120,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   arbre: {fileID: 2305645716354192231}
   infosJoueur: {fileID: 11400000, guid: 515ad02c0cf7bed4b8744016ec74d23f, type: 2}
+  anchor: {fileID: 0}
+  arbreRouge: 0
+  arbreJaune: 0
+  arbreBleu: 1
+  graineRougeADetruire: {fileID: 2886564583687511563, guid: 7c175a2969477d3469aa562e3cbb01a5,
+    type: 3}
+  graineJauneADetruire: {fileID: 8353971290506875543, guid: 0db38c38710ec1d48840e958156e8a86,
+    type: 3}
+  graineBleuADetruire: {fileID: 1337926630556278577, guid: 252c3abc91048154ea68efac27ad4f6d,
+    type: 3}
 --- !u!1 &2305645716354192231
 GameObject:
   m_ObjectHideFlags: 0
@@ -131,6 +141,7 @@ GameObject:
   - component: {fileID: 3678714699424549023}
   - component: {fileID: 3227698733089477232}
   - component: {fileID: 6039258776775498378}
+  - component: {fileID: 7426852665772268148}
   m_Layer: 0
   m_Name: ArbreBleu
   m_TagString: Untagged
@@ -203,6 +214,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &7426852665772268148
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2305645716354192231}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.76325226, y: 5.084371, z: 0.6834564}
+  m_Center: {x: 0.0327034, y: 2.5267913, z: 0.037005484}
 --- !u!1 &5724256023691191629
 GameObject:
   m_ObjectHideFlags: 0

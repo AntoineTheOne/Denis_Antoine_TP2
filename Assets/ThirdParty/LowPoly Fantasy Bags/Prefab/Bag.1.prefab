@@ -33,7 +33,7 @@ Transform:
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: -1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &4102528328599116466
 MeshFilter:
@@ -121,3 +121,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   graineDansMain: {fileID: 0}
   infosJoueur: {fileID: 11400000, guid: 515ad02c0cf7bed4b8744016ec74d23f, type: 2}
+  graineRouge: 0
+  graineJaune: 1
+  graineBleu: 0

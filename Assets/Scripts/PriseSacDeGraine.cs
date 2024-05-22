@@ -19,11 +19,9 @@ void Start(){
             {
                 infosJoueur.sacEnMain = true;
                 transform.SetParent(other.gameObject.transform.Find("AncorSac"), false); 
-                
-                //Vector3 positionSac = new Vector3(0f, 0f, 0f);
-               //transform.SetPositionAndRotation( positionSac, other.gameObject.transform.rotation);
                 transform.localPosition = new Vector3(0,0,0);
                 infosJoueur.sacJaune = true;
+                Debug.Log(infosJoueur.point);
             }
         
 

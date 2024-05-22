@@ -97,6 +97,7 @@ GameObject:
   - component: {fileID: 3687833821393880077}
   - component: {fileID: 2251052537842244859}
   - component: {fileID: 1526425546904496054}
+  - component: {fileID: 81667386353859796}
   m_Layer: 0
   m_Name: ZoneHitBox
   m_TagString: Untagged
@@ -190,6 +191,20 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &81667386353859796
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1692627720618982911}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c99e85fa1ff4394fb268ddee1efadaa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  arbre: {fileID: 5787696345349507186}
+  infosJoueur: {fileID: 11400000, guid: 515ad02c0cf7bed4b8744016ec74d23f, type: 2}
 --- !u!1 &5787696345349507186
 GameObject:
   m_ObjectHideFlags: 0
@@ -207,7 +222,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8116201498184723302
 Transform:
   m_ObjectHideFlags: 0

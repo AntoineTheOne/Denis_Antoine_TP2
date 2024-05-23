@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 480707659ae7b0142b51df90f262e751, type: 3}
   m_Name: InfosJoueur
   m_EditorClassIdentifier: 
-  nomJoueur: 
-  nomVillage: 
-  point: 0
-  nbrVie: 4
-  sacEnMain: 1
-  TypeDeSacDansMain: Rouge
+  nomJoueur: Antoine
+  nomVillage: Varennes
+  point: 11
+  nbrVie: 0
+  sacEnMain: 0
+  TypeDeSacDansMain: 

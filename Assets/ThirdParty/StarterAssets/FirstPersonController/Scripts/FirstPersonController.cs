@@ -11,6 +11,8 @@ namespace StarterAssets
 #endif
 	public class FirstPersonController : MonoBehaviour
 	{
+		[SerializeField] private Canvas canvasAudioMixer;
+
 		[Header("Player")]
 		[Tooltip("Move speed of the character in m/s")]
 		public float MoveSpeed = 4.0f;
@@ -264,5 +266,20 @@ namespace StarterAssets
 			// when selected, draw a gizmo in the position of, and matching radius of, the grounded collider
 			Gizmos.DrawSphere(new Vector3(transform.position.x, transform.position.y - GroundedOffset, transform.position.z), GroundedRadius);
 		}
-	}
+
+		
+
+
+		private void OnOuvrirUI(){
+			canvasAudioMixer.gameObject.SetActive(true);
+			Cursor.lockState = CursorLockMode.Confined;
+			}
+		}
+		
+
+
+
+
+
+
 }

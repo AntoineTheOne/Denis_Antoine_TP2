@@ -8,6 +8,7 @@ public class MiseAJourVies : MonoBehaviour
 
     void Start()
     {
+        infosJoueur.nbrVie = 4;
         MettreAJourVies();
     }
 

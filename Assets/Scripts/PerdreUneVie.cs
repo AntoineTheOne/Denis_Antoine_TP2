@@ -9,6 +9,14 @@ public class PerdreUneVie : MonoBehaviour
 
     [SerializeField] InfosJoueur infosJoueur;
 
+    [SerializeField] private GameObject Personnage;
+
+    private AudioSource audioSource;
+
+
+        private void Start(){
+            audioSource = Personnage.GetComponent<AudioSource>();
+        }
 
    private void OnTriggerEnter(Collider other)
     {
@@ -26,13 +34,14 @@ public class PerdreUneVie : MonoBehaviour
         if (infosJoueur.nbrVie > 0)
         {
             infosJoueur.nbrVie--;
-            Debug.Log("Vies restantes: " + infosJoueur.nbrVie);
+            audioSource.Play(0);
+            
         }
 
         if (infosJoueur.nbrVie <= 0)
         {
             
-            Debug.Log("Le joueur est mort.");
+
         }
     }
 

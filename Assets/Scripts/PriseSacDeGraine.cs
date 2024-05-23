@@ -3,7 +3,6 @@ using UnityEngine.UIElements;
 
 public class PriseSacDeGraine : MonoBehaviour
 {
-    [SerializeField] private GameObject graineDansMain;
     [SerializeField] private InfosJoueur infosJoueur;
     public bool graineRouge;
     public bool graineJaune;

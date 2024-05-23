@@ -1,21 +1,22 @@
 using UnityEngine;
 
-public class GestionViesJoueur : MonoBehaviour
+public class PerdreVieEnCollision : MonoBehaviour
 {
-    [SerializeField] private InfosJoueur infosJoueur;
+    [SerializeField] private InfosJoueur infosJoueur; 
 
-
-void Start(){
-    infosJoueur.nbrVie = 4;
-}
-
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            PerdreVie();
+        }
+    }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Ennemi"))
+        if (other.CompareTag("Enemy")) 
         {
             PerdreVie();
-            Debug.Log("merde");
         }
     }
 
@@ -29,7 +30,7 @@ void Start(){
 
         if (infosJoueur.nbrVie <= 0)
         {
-        
+            
             Debug.Log("Le joueur est mort.");
         }
     }

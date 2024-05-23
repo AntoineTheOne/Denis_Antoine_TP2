@@ -3,11 +3,14 @@ using UnityEngine.AI;
 
 public class Ennemi : MonoBehaviour
 {
-    [SerializeField] private NavMeshAgent agent;
-    [SerializeField] private Transform player;
+    
     [SerializeField] private Vector3 zoneSize;
-
+    [SerializeField] private Transform player;
+    [SerializeField] private NavMeshAgent agent;
     private bool enPoursuite = false;
+
+
+
 
     void Start()
     {
@@ -36,13 +39,13 @@ public class Ennemi : MonoBehaviour
         ChoisirDestinationAleatoireDansZone();
     }
 
-    void ChoisirDestinationAleatoireDansZone()
-    {
-        Vector3 randomDestination = transform.position + new Vector3(Random.Range(-zoneSize.x / 2f, zoneSize.x / 2f),
-                                                                      0f,
-                                                                      Random.Range(-zoneSize.z / 2f, zoneSize.z / 2f));
-        agent.SetDestination(randomDestination);
-    }
+        void ChoisirDestinationAleatoireDansZone()
+        {
+            Vector3 randomDestination = transform.position + new Vector3(Random.Range(-zoneSize.x / 2f, zoneSize.x / 2f),
+                                                                        0f,
+                                                                        Random.Range(-zoneSize.z / 2f, zoneSize.z / 2f));
+            agent.SetDestination(randomDestination);
+        }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -53,18 +56,14 @@ public class Ennemi : MonoBehaviour
         }
     }
 
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.CompareTag("Player"))
+        private void OnTriggerExit(Collider other)
         {
-            enPoursuite = false;
-            CommencerErrance();
+            if (other.CompareTag("Player"))
+            {
+                enPoursuite = false;
+                CommencerErrance();
+            }
         }
-    }
 
-    private void OnDrawGizmosSelected()
-    {
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireCube(transform.position, zoneSize);
-    }
+   
 }

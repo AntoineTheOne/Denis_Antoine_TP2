@@ -24,8 +24,6 @@ public class PerdreUneVie : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             PerdreVie();
-            Debug.Log("allo");
-            
         }
     }
 
@@ -38,11 +36,7 @@ public class PerdreUneVie : MonoBehaviour
             
         }
 
-        if (infosJoueur.nbrVie <= 0)
-        {
-            
-
-        }
+        
     }
 
 

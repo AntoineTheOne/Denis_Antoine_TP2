@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nomJoueur: Antoine
   nomVillage: Varennes
-  point: 11
-  nbrVie: 0
+  point: 36
+  nbrVie: 4
   sacEnMain: 0
   TypeDeSacDansMain: 

@@ -9,6 +9,8 @@ public class PlanterArbre : MonoBehaviour
     [SerializeField] private GameObject anchor;
     public bool arbreRouge;
     public bool arbreJaune;
+    public bool arbreBleu;
+
 
     [SerializeField] private GameObject Personnage;
 
@@ -17,32 +19,27 @@ public class PlanterArbre : MonoBehaviour
     void Start(){
         audioSource = Personnage.GetComponent<AudioSource>();
     }
-
-
-
-    public bool arbreBleu;
-
     private void OnTriggerEnter(Collider other)
-    {
+    {   audioSource.Play(0);
         if (!other.gameObject.CompareTag("Player")) return;
 
         if (infosJoueur.TypeDeSacDansMain == "Jaune" && arbreJaune)
         {
             ActivationArbreJaune();
+            
             infosJoueur.sacEnMain = false;
-            audioSource.Play(0);
         }
         else if (infosJoueur.TypeDeSacDansMain == "Rouge" && arbreRouge)
         {
             ActivationArbreRouge();
-            infosJoueur.sacEnMain = false;
             audioSource.Play(0);
+            infosJoueur.sacEnMain = false;
         }
         else if (infosJoueur.TypeDeSacDansMain == "Bleu" && arbreBleu)
         {
             ActivationArbreBleu();
-            infosJoueur.sacEnMain = false;
             audioSource.Play(0);
+            infosJoueur.sacEnMain = false;
         }
     }
 

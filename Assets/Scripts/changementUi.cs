@@ -1,11 +1,13 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class changementUi : MonoBehaviour
 {
     [SerializeField] private InfosJoueur infosJoueur;
     [SerializeField] TextMeshProUGUI texteJoueur;
     [SerializeField] TextMeshProUGUI texteVillage;
+    [SerializeField] TextMeshPro textePanneauVillage;
     void Start()
     {
         UpdateTexteJoeur();
@@ -20,5 +22,7 @@ public class changementUi : MonoBehaviour
     void UpdateTexteVillage()
     {
         texteVillage.text = infosJoueur.nomVillage;
+        textePanneauVillage.text = infosJoueur.nomVillage;
+
     }
 }

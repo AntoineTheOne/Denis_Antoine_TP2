@@ -12,10 +12,12 @@ public class EchecOuGagneChangementScene : MonoBehaviour
         if(infosJoueur.nbrVie <= 0){
 
         SceneManager.LoadScene("SceneEchec");
+        Cursor.lockState = CursorLockMode.Confined;
         }
 
         if(infosJoueur.point == 36){
         SceneManager.LoadScene("SceneReussi");
+        Cursor.lockState = CursorLockMode.Confined;
         }
 
 

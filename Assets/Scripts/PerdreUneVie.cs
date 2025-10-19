@@ -4,45 +4,30 @@ using UnityEngine;
 
 public class PerdreUneVie : MonoBehaviour
 {
-
-
-
-    [SerializeField] InfosJoueur infosJoueur;
-
-    [SerializeField] private GameObject Personnage;
-
-    private AudioSource audioSource;
+    [SerializeField] InfosJoueur infosJoueur; // Référence au ScriptableObject
+    [SerializeField] private GameObject Personnage; // Référence au joueur
+    private AudioSource audioSource; // Pour jouer un son
 
 
         private void Start(){
-            audioSource = Personnage.GetComponent<AudioSource>();
+            audioSource = Personnage.GetComponent<AudioSource>(); // Récupère le composant AudioSource du joueur
         }
-
-   private void OnTriggerEnter(Collider other)
+   private void OnTriggerEnter(Collider other) 
     {
 
-        if (other.gameObject.CompareTag("Player"))
+        if (other.gameObject.CompareTag("Player")) // Si le joueur entre en collision
         {
-            PerdreVie();
+            PerdreVie(); // Appelle la fonction pour perdre une vie
         }
     }
-
-    private void PerdreVie()
+    private void PerdreVie() // Si le joueur a encore des vies
     {
         if (infosJoueur.nbrVie > 0)
         {
-            infosJoueur.nbrVie--;
-            audioSource.Play(0);
-            
-        }
-
-        
+            infosJoueur.nbrVie--; // Retire une vie
+            audioSource.Play(0);  // Joue le son associé
+        } 
     }
-
-
-
-
-
 }
 
 
